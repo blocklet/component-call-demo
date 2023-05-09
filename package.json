@@ -7,17 +7,15 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "pnpm -r run lint"
     }
   },
   "scripts": {
-    "init": "lerna bootstrap && lerna link",
-    "lint": "lerna run lint",
-    "lint:fix": "lerna run lint:fix",
-    "build": "lerna run clean && lerna run build",
-    "clean": "lerna clean && lerna run clean",
-    "bump-version": "zx scripts/bump-version.mjs --quiet",
-    "update:deps": "lerna exec --no-bail -- \"ncu -u -f /arcblock\\|ocap\\|abtnode\\|blocklet\\|did-connect/\" && lerna bootstrap && npx yarn-deduplicate yarn.lock && yarn"
+    "lint": "pnpm -r run lint",
+    "lint:fix": "pnpm -r run lint:fix",
+    "clean": "pnpm -r run clean",
+    "bump-version": "zx --quiet scripts/bump-version.mjs",
+    "update:deps": "pnpm up arcblock|ocap|abtnode|blocklet|did-connect && pnpm dedupe"
   },
   "keywords": [],
   "author": "",

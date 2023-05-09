@@ -13,8 +13,7 @@
     "lint": "eslint src api --ext .mjs,.js,.vue",
     "lint:fix": "npm run lint -- --fix",
     "deploy:child": "npm run bundle && blocklet deploy .blocklet/bundle --app-did=z2qZyTxsc3dUQDRzHGoq8wSUyYf5PLzgYt1ew",
-    "dev:child": "blocklet dev --component --app-did=z2qZyTxsc3dUQDRzHGoq8wSUyYf5PLzgYt1ew",
-    "prepare": "husky install"
+    "dev:child": "blocklet dev --component --app-did=z2qZyTxsc3dUQDRzHGoq8wSUyYf5PLzgYt1ew"
   },
   "dependencies": {
     "@arcblock/did-auth": "^1.18.75",
