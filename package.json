@@ -15,7 +15,7 @@
     "lint:fix": "pnpm -r run lint:fix",
     "clean": "pnpm -r run clean",
     "bump-version": "zx --quiet scripts/bump-version.mjs",
-    "update:deps": "pnpm up arcblock|ocap|abtnode|blocklet|did-connect && pnpm dedupe"
+    "update:deps": "taze -rwn '/arcblock|abtnode|blocklet|did-connect|did-comment|nedb|ocap/' && pnpm dedupe"
   },
   "keywords": [],
   "author": "",
